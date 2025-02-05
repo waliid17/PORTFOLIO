@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { DotLottiePlayer } from '@dotlottie/react-player';
-import anime from 'animejs';
+import anime from 'animejs'; // Ensure @types/animejs is installed
 
 const Home: React.FC = () => {
   const gifContainerRef = useRef<HTMLDivElement | null>(null);
@@ -8,10 +8,10 @@ const Home: React.FC = () => {
 
   useEffect(() => {
     // Smooth scroll for navigation links
-    document.querySelectorAll("nav ul li a").forEach((link: HTMLAnchorElement) => {
-      link.addEventListener("click", (event: MouseEvent) => {
+    document.querySelectorAll("nav ul li a").forEach((link: Element) => {
+      (link as HTMLAnchorElement).addEventListener("click", (event: MouseEvent) => {
         event.preventDefault();
-        const targetId = link.getAttribute("href")?.substring(1);
+        const targetId = (link as HTMLAnchorElement).getAttribute("href")?.substring(1);
         const targetElement = document.getElementById(targetId || '');
 
         if (targetElement) {
@@ -27,9 +27,6 @@ const Home: React.FC = () => {
     const typingElement = document.getElementById('typing-name');
     if (typingElement) {
       const text = "Kheloufi Walid"; // Set the text you want to animate
-      let index = 0;
-
-      // Wrap each character of the text inside a span
       typingElement.innerHTML = text.split('').map(letter => `<span class="letter">${letter}</span>`).join('');
 
       // Anime.js animation for typing effect
@@ -39,7 +36,7 @@ const Home: React.FC = () => {
           opacity: [0, 1], 
           easing: "easeOutExpo", 
           duration: 600,
-          delay: (el: HTMLElement, i: number) => i * 50 // Delay for each letter to type one after another
+          delay: (_, i) => i * 50 // Delay for each letter to type one after another
         })
         .add({
           targets: '#typing-name', // Make the text blink after it's fully typed
@@ -90,14 +87,14 @@ const Home: React.FC = () => {
         <p className="subtitle text-lg md:text-xl text-gray-700 mt-3">
           Passionate about creating elegant solutions to complex problems. Experienced in HTML, CSS, PHP, and database management.
         </p>
-        <div className="buttons flex flex-row gap-2 mt-8"> {/* Reduced gap to 2 */}
-  <a href="#CV" className="btn bg-blue-600 text-white px-6 py-3 rounded-lg font-bold uppercase hover:bg-blue-700 transition-colors duration-300">
-    Download CV
-  </a>
-  <a href="#projects" className="btn secondary border-2 border-black text-black px-6 py-3 rounded-lg font-bold uppercase hover:bg-blue-600 hover:text-white hover:border-blue-800 transition-colors duration-300">
-    My Works
-  </a>
-</div>
+        <div className="buttons flex flex-row gap-4 mt-8">
+          <a href="#youtube" className="btn bg-blue-600 text-white px-6 py-3 rounded-lg font-bold uppercase hover:bg-blue-700 transition-colors duration-300">
+            Download CV
+          </a>
+          <a href="#works" className="btn secondary border-2 border-black text-black px-6 py-3 rounded-lg font-bold uppercase hover:bg-blue-600 hover:text-white hover:border-blue-800 transition-colors duration-300">
+            My Works
+          </a>
+        </div>
       </div>
 
       {/* Right-side image */}
