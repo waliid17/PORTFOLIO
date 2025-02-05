@@ -88,10 +88,10 @@ const Home: React.FC = () => {
           Passionate about creating elegant solutions to complex problems. Experienced in HTML, CSS, PHP, and database management.
         </p>
         <div className="buttons flex flex-row gap-4 mt-8">
-          <a href="#youtube" className="btn bg-blue-600 text-white px-6 py-3 rounded-lg font-bold uppercase hover:bg-blue-700 transition-colors duration-300">
+          <a href="#CV" className="btn bg-blue-600 text-white px-6 py-3 rounded-lg font-bold uppercase hover:bg-blue-700 transition-colors duration-300">
             Download CV
           </a>
-          <a href="#works" className="btn secondary border-2 border-black text-black px-6 py-3 rounded-lg font-bold uppercase hover:bg-blue-600 hover:text-white hover:border-blue-800 transition-colors duration-300">
+          <a href="#projects" className="btn secondary border-2 border-black text-black px-6 py-3 rounded-lg font-bold uppercase hover:bg-blue-600 hover:text-white hover:border-blue-800 transition-colors duration-300">
             My Works
           </a>
         </div>
