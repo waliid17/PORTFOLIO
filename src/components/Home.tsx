@@ -76,11 +76,11 @@ const Home: React.FC = () => {
   }, []);
 
   return (
-    <section id="home" className="flex flex-col md:flex-row items-center justify-between min-h-screen p-5 bg-white overflow-hidden">
+    <section id="home" className="flex flex-col md:flex-row items-center justify-between min-h-screen p-5 bg-white overflow-x-hidden">
       {/* Left-side content */}
       <div ref={contentRef} className="content flex flex-col justify-center items-start flex-grow md:pl-24 px-4 opacity-0 text-center md:text-left">
         <p className="hello text-lg md:text-2xl font-semibold text-gray-700">Hello !</p>
-        <h1 className="text-3xl md:text-6xl font-bold text-blue-600 mt-4">
+        <h1 className="text-2xl md:text-6xl font-bold text-blue-600 mt-4">
           I'm <span id="typing-name" className="text-black font-bold"></span>
         </h1>
         <p className="title text-xl md:text-3xl font-bold text-black mt-5">Développeur Web Full Stack</p>
@@ -98,7 +98,7 @@ const Home: React.FC = () => {
       </div>
 
       {/* Right-side image */}
-      <div ref={gifContainerRef} className="gif-container transform transition-transform duration-300 hover:scale-110 overflow-hidden opacity-0 mt-8 md:mt-0 w-full md:w-auto">
+      <div ref={gifContainerRef} className="gif-container transform transition-transform duration-300 hover:scale-110 overflow-hidden opacity-0 mt-8 md:mt-0 w-full md:w-auto max-w-full">
         <DotLottiePlayer
           src="https://lottie.host/dc69107c-80d7-4a73-a5aa-8764a41a241a/yXGjMNBumv.lottie"
           background="transparent"
