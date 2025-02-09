@@ -79,19 +79,19 @@ const Home: React.FC = () => {
     <section id="home" className="flex flex-col md:flex-row items-center justify-between min-h-screen p-5 bg-white overflow-hidden">
       {/* Left-side content */}
       <div ref={contentRef} className="content flex flex-col justify-center items-start flex-grow md:pl-24 px-4 opacity-0 text-center md:text-left">
-        <p className="hello text-xl md:text-2xl font-semibold text-gray-700">Hello !</p>
-        <h1 className="text-4xl md:text-6xl font-bold text-blue-600 mt-4">
+        <p className="hello text-lg md:text-2xl font-semibold text-gray-700">Hello !</p>
+        <h1 className="text-3xl md:text-6xl font-bold text-blue-600 mt-4">
           I'm <span id="typing-name" className="text-black font-bold"></span>
         </h1>
-        <p className="title text-2xl md:text-3xl font-bold text-black mt-5">Développeur Web Full Stack</p>
-        <p className="subtitle text-lg md:text-xl text-gray-700 mt-3">
+        <p className="title text-xl md:text-3xl font-bold text-black mt-5">Développeur Web Full Stack</p>
+        <p className="subtitle text-base md:text-xl text-gray-700 mt-3">
           Passionate about creating elegant solutions to complex problems. Experienced in HTML, CSS, PHP, and database management.
         </p>
-        <div className="buttons flex flex-row gap-4 mt-8">
-          <a href="#CV" className="btn bg-blue-600 text-white px-6 py-3 rounded-lg font-bold uppercase hover:bg-blue-700 transition-colors duration-300">
+        <div className="buttons flex flex-col md:flex-row gap-4 mt-8 w-full md:w-auto">
+          <a href="#CV" className="btn bg-blue-600 text-white px-4 py-2 md:px-6 md:py-3 rounded-lg font-bold uppercase hover:bg-blue-700 transition-colors duration-300 text-sm md:text-base text-center">
             Download CV
           </a>
-          <a href="#projects" className="btn secondary border-2 border-black text-black px-6 py-3 rounded-lg font-bold uppercase hover:bg-blue-600 hover:text-white hover:border-blue-800 transition-colors duration-300">
+          <a href="#projects" className="btn secondary border-2 border-black text-black px-4 py-2 md:px-6 md:py-3 rounded-lg font-bold uppercase hover:bg-blue-600 hover:text-white hover:border-blue-800 transition-colors duration-300 text-sm md:text-base text-center">
             My Works
           </a>
         </div>
