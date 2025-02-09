@@ -79,7 +79,9 @@ const Home: React.FC = () => {
     <section id="home" className="flex flex-col md:flex-row items-center justify-between min-h-screen p-5 bg-white overflow-x-hidden">
       {/* Left-side content */}
       <div ref={contentRef} className="content flex flex-col justify-center items-start flex-grow md:pl-24 px-4 opacity-0 text-center md:text-left">
-        <p className="hello text-lg md:text-2xl font-semibold text-gray-700">Hello !</p>
+      <p className="hello text-lg md:text-2xl font-semibold text-gray-700 mt-8 md:mt-0">
+  Hello !
+</p>
         <h1 className="text-2xl md:text-6xl font-bold text-blue-600 mt-4">
           I'm <span id="typing-name" className="text-black font-bold"></span>
         </h1>
